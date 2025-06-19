@@ -8,43 +8,37 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#333333">
+        android:background="@drawable/bg">
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="#d1e7dd">
             <TextView
                 android:id="@+id/timestampTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:padding="8dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:background="@color/white"
+                android:text="Tanggal / waktu kurs"
+                android:textColor="#0f5132"
                 android:layout_marginBottom="8dp"/>
-            <TextView
-                android:id="@+id/colonTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textStyle="italic"
-                android:textColor="@color/cardview_dark_background"
-                android:textSize="11sp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"/>
+            </androidx.cardview.widget.CardView>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="2"/>
+                android:background="@android:color/transparent"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
